@@ -32,7 +32,7 @@ test("recieves issues.opened event", async function () {
     .post(
       "/repos/probot/example-netlify-functions/issues/1/comments",
       (requestBody) => {
-        assert.equal(requestBody, { body: "Hello, World!" });
+        assert.equal(requestBody, { body: "Thanks for opening this issue!" });
 
         return true;
       }
